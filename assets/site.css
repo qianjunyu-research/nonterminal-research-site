@@ -365,6 +365,15 @@ p {
   color: rgba(255, 250, 240, 0.76);
 }
 
+.page-head .page-motto {
+  margin-top: 14px;
+  color: #d7aa6b;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
 .two-column {
   display: grid;
   grid-template-columns: minmax(0, 0.68fr) minmax(280px, 0.32fr);
