@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Non-Terminal Research Social Assets</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;600;700&family=Inter:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --ink: #07111f;
+        --ink-2: #111d2d;
+        --paper: #fffaf0;
+        --muted: rgba(255, 250, 240, 0.72);
+        --line: rgba(255, 250, 240, 0.18);
+        --bronze: #d7aa6b;
+        --bronze-2: #a87637;
+        --steel: #53728d;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: var(--ink);
+      }
+
+      body {
+        color: var(--paper);
+        font-family: "Inter", "Segoe UI", Arial, sans-serif;
+      }
+
+      .artboard {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        background:
+          linear-gradient(90deg, rgba(7, 17, 31, 0.99), rgba(17, 29, 45, 0.96)),
+          var(--ink);
+      }
+
+      .artboard::before,
+      .artboard::after {
+        content: "";
+        position: absolute;
+        pointer-events: none;
+      }
+
+      .artboard::before {
+        inset: 0;
+        background:
+          linear-gradient(90deg, rgba(255, 250, 240, 0.045) 1px, transparent 1px),
+          linear-gradient(0deg, rgba(255, 250, 240, 0.032) 1px, transparent 1px);
+        background-size: 120px 120px;
+        opacity: 0.45;
+      }
+
+      .artboard::after {
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 9px;
+        background: linear-gradient(90deg, var(--bronze-2), var(--bronze), var(--steel));
+        opacity: 0.86;
+      }
+
+      .content {
+        position: relative;
+        z-index: 2;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .mark {
+        position: absolute;
+        right: 74px;
+        top: 64px;
+        width: 118px;
+        height: 118px;
+        border: 1px solid rgba(255, 250, 240, 0.28);
+        display: grid;
+        place-items: center;
+        color: var(--paper);
+        font-family: "EB Garamond", Georgia, serif;
+        font-size: 46px;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+      }
+
+      .mark::after {
+        content: "";
+        position: absolute;
+        left: 22px;
+        right: 22px;
+        bottom: 26px;
+        height: 2px;
+        background: var(--bronze);
+      }
+
+      .label {
+        color: var(--bronze);
+        font-size: 17px;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 18px 0 0;
+        max-width: 760px;
+        font-family: "EB Garamond", Georgia, serif;
+        font-size: 104px;
+        line-height: 0.9;
+        font-weight: 600;
+        letter-spacing: 0;
+      }
+
+      .subtitle {
+        margin-top: 32px;
+        max-width: 760px;
+        color: rgba(255, 250, 240, 0.82);
+        font-family: "EB Garamond", Georgia, serif;
+        font-size: 40px;
+        line-height: 1.12;
+        font-weight: 600;
+      }
+
+      .meta {
+        margin-top: 28px;
+        max-width: 820px;
+        color: var(--muted);
+        font-size: 24px;
+        line-height: 1.36;
+      }
+
+      .rule {
+        width: 126px;
+        height: 3px;
+        margin-top: 34px;
+        background: var(--bronze);
+      }
+
+      .url {
+        position: absolute;
+        left: 76px;
+        bottom: 50px;
+        color: rgba(255, 250, 240, 0.62);
+        font-size: 19px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .og .content {
+        padding: 78px 86px;
+      }
+
+      .wide .content {
+        padding: 48px 70px;
+      }
+
+      .wide .mark {
+        right: 58px;
+        top: 46px;
+        width: 92px;
+        height: 92px;
+        font-size: 36px;
+      }
+
+      .wide .mark::after {
+        left: 18px;
+        right: 18px;
+        bottom: 20px;
+      }
+
+      .wide .label {
+        font-size: 14px;
+      }
+
+      .wide h1 {
+        max-width: 1120px;
+        font-size: 68px;
+      }
+
+      .wide .subtitle {
+        margin-top: 20px;
+        max-width: 960px;
+        font-size: 31px;
+      }
+
+      .wide .meta {
+        margin-top: 18px;
+        max-width: 980px;
+        font-size: 19px;
+      }
+
+      .wide .rule {
+        margin-top: 26px;
+        width: 96px;
+      }
+
+      .wide .url {
+        left: 70px;
+        bottom: 34px;
+        font-size: 15px;
+      }
+
+      .linkedin .content {
+        padding-left: 92px;
+      }
+
+      .github h1 {
+        max-width: 940px;
+        font-size: 82px;
+      }
+
+      .github .subtitle {
+        max-width: 900px;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="artboard og" id="artboard">
+      <div class="content">
+        <div class="mark" aria-hidden="true">NT</div>
+        <div class="label">Non-Terminal Research</div>
+        <h1>Research archive of QianJun Yu</h1>
+        <div class="subtitle">Civilizational governance, cognitive architecture, and long-horizon systems.</div>
+        <div class="meta">System of Eternity / Cognitive Trinity Framework / architecture-model simulation evidence</div>
+        <div class="rule"></div>
+        <div class="url">nonterminal.org</div>
+      </div>
+    </main>
+    <script>
+      const variant = new URLSearchParams(window.location.search).get("variant") || "og";
+      const board = document.getElementById("artboard");
+      board.className = `artboard ${variant}`;
+    </script>
+  </body>
+</html>
