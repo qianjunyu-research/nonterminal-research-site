@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you cite this website, please cite it as the public research hub for Non-Terminal Research."
+title: "Non-Terminal Research"
+authors:
+  - family-names: "Yu"
+    given-names: "QianJun"
+url: "https://nonterminal.org/"
+repository-code: "https://github.com/qianjunyu-research/nonterminal-research-site"
+date-released: "2026-06-03"
+abstract: "Public research hub and archive map for QianJun Yu's independent theoretical research on non-terminal governance architecture, cognitive architecture, speculative cosmology, and related formal systems."
+keywords:
+  - "Non-Terminal Research"
+  - "System of Eternity"
+  - "civilizational governance"
+  - "Cognitive Trinity Framework"
+  - "architecture-model simulation"
+license: "CC-BY-4.0"
