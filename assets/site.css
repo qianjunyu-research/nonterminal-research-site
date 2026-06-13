@@ -434,6 +434,69 @@ p {
   color: #414b5a;
 }
 
+.problem-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.problem-strip a {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  border: 1px solid var(--line);
+  background: rgba(247, 245, 238, 0.58);
+  padding: 0 14px;
+  color: #3f5268;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.problem-strip a:hover {
+  border-color: rgba(168, 118, 55, 0.82);
+  color: #6d481e;
+}
+
+.domain-list {
+  display: grid;
+  gap: 26px;
+  margin-top: 30px;
+}
+
+.domain-card {
+  border: 1px solid var(--line);
+  background: rgba(247, 245, 238, 0.56);
+  padding: 26px 28px;
+}
+
+.domain-card h3 {
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(168, 118, 55, 0.5);
+}
+
+.domain-card dl {
+  display: grid;
+  gap: 14px;
+  margin: 20px 0 0;
+}
+
+.domain-card dt {
+  color: var(--ink);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.domain-card dd {
+  margin: 4px 0 0;
+  color: #414b5a;
+}
+
 .page-head {
   background: var(--ink);
   color: var(--white);
