@@ -461,6 +461,31 @@ p {
   color: #6d481e;
 }
 
+.question-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 26px;
+}
+
+.question-grid a {
+  display: flex;
+  min-height: 112px;
+  align-items: flex-start;
+  border-left: 3px solid rgba(168, 118, 55, 0.72);
+  background: rgba(247, 245, 238, 0.58);
+  padding: 18px 20px;
+  color: var(--ink);
+  font-weight: 650;
+  line-height: 1.45;
+  text-decoration: none;
+}
+
+.question-grid a:hover {
+  background: rgba(255, 250, 240, 0.72);
+  color: #6d481e;
+}
+
 .domain-list {
   display: grid;
   gap: 26px;
@@ -604,10 +629,15 @@ p {
   }
 
   .grid,
+  .question-grid,
   .status-list,
   .apparatus,
   .two-column {
     grid-template-columns: 1fr;
+  }
+
+  .question-grid a {
+    min-height: auto;
   }
 
   .pub-row {
